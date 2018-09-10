@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="well">
+    <h1>Search Nasa Images</h1>
+    
+    <%= render partial: "layouts/errors", :locals => {errors: @errors} %>
+    
+    <p>Please enter search terms:</p>
+
+    <%= form_for @image_search, url: {action: "create"} do |f| %>
+            
+      <div class="form-group row">
+	<%= f.label :search_terms, class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :search_terms, class: 'form-control' %>
+	  </div>
+      </div>  
+      <div class="form-group row">
+	<%= f.label :description, class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :description, class: 'form-control' %>
+	  </div>
+      </div>
+      <div class="form-group row">
+	<%= f.label :center, 'Nasa Center', class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :center, class: 'form-control' %>
+	  </div>
+      </div>    
+      <div class="form-group row">
+	<%= f.label :keywords, class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :keywords, class: 'form-control' %>
+	  </div>
+      </div>
+      <div class="form-group row">
+	<%= f.label :location, class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :location, class: 'form-control' %>
+	  </div>
+      </div>
+      <div class="form-group row">
+	<%= f.label :nasa_id, 'Nasa Image ID', class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :nasa_id, class: 'form-control' %>
+	  </div>
+      </div>  
+      <div class="form-group row">
+	<%= f.label :title, 'Image Title', class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :title, class: 'form-control' %>
+	  </div>
+      </div>
+      <div class="form-group row">
+	<%= f.label :year_start, 'Year Start (YYYY)', class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :year_start, class: 'form-control' %>
+	  </div>
+      </div>
+      <div class="form-group row">
+	<%= f.label :year_end, 'Year End (YYYY)', class: 'col-sm-2 col-form-label' %>
+	  <div class="col-sm-5">
+	    <%= f.text_field :year_end, class: 'form-control' %>
+	  </div>
+      </div>  
+      <div class="form-group row">
+	  <div class="col-sm-5">
+	    <%= f.submit "Search", class: 'btn btn-primary' %>
+	  </div>
+      </div>    
+    <% end %>
+  </div>
+</div>

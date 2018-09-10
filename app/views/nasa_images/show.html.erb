@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="well">
+    <h1><%=@nasa_image.title%></h1>
+    <div>
+      <%= link_to nasa_image_path(@nasa_image) do %>
+	  <%= image_tag @nasa_image.thumbnail_url, alt: @nasa_image.title, class:"img-responsive"%>
+      <% end %>
+    </div>
+    <div class="image-info-panel">
+      <h3>Image Details</h3>
+      <div><label for="center">Center:</label><%=@nasa_image.center%></div>
+      <div><label for="date-image-created">Date Image Created:</label><%=@nasa_image.date_image_created%></div>
+      <div><label for="description">Description:</label><%=@nasa_image.description%></div>
+      <div><label for="keywords">Keywords:</label><%=@nasa_image.keywords%></div>
+      <div><label for="media-type">Media Type:</label><%=@nasa_image.media_type%></div>
+      <div><label for="nasa-id">Nasa ID:</label><%=@nasa_image.nasa_id%></div>
+      <div><label for="title">Title:</label><%=@nasa_image.title%></div>
+      <div><label for="more-images">More Images:</label><%=@nasa_image.image_collection_url%></div>
+      <div><label for="image-path">Image Path:</label><%=@nasa_image.thumbnail_url%></div> 
+    </div>
+  </div>
+</div>

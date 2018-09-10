@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="well">
+  <h1>Nasa Images</h1>
+  <h3>Image Total: <%=@total_image_count%></h3>
+  <hr />
+  <%if @total_image_count > 0%>
+    <%= will_paginate nasa_images %>
+    <div class="row"> 
+      <%nasa_images.each_slice(@images_per_column) do |column_images|%>
+	<div class="column">
+	  <%column_images.each do |image|%>
+	      <%= link_to nasa_image_path(image) do %>
+		  <img src="<%=image.thumbnail_url%>" style="width:100%" alt="<%=image.title%>">
+	      <% end %>
+	  <%end%>
+	</div>
+      <%end%>  
+    </div>
+  <%= will_paginate nasa_images %>
+  <%else%>
+    There are no images to display that meet the search criteria.
+  <%end%>
+  </div>  
+</div>

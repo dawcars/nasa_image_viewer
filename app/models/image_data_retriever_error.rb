@@ -1,0 +1,2 @@
+class ImageDataRetrieverError < StandardError
+end
