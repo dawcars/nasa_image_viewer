@@ -1,0 +1,12 @@
+<% if errors.any? %>
+<div class="panel panel-danger errors">
+  <div class="panel-heading">
+    <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors</h5>
+  </div>
+  <ul class="panel-body">
+  <% errors.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  center: MyString
+  date_image_created: 
+  description: MyText
+  keywords: MyText
+  media_type: MyString
+  nasa_id: MyString
+  title: MyString
+  image_collection_url: MyText
+  thumbnail_url: MyText
+
+two:
+  center: MyString
+  date_image_created: 
+  description: MyText
+  keywords: MyText
+  media_type: MyString
+  nasa_id: MyString
+  title: MyString
+  image_collection_url: MyText
+  thumbnail_url: MyText
